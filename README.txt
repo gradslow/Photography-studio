@@ -1,0 +1,1 @@
+Photography studio project ending my front-end course. All the images were downloaded from https://www.pexels.com/.
