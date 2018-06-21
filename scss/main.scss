@@ -1,0 +1,2389 @@
+@import"modules/_placeholders";
+@import"modules/_variables";
+
+*
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+body
+  {
+    font-family: 'Lato', serif;
+  }
+
+.clearfix
+  {
+    clear: both;
+  }
+
+.responsive
+{
+  overflow: hidden;
+  height: 100vh;
+}
+/* ---------- index.html styles ---------- */
+
+.slick-prev
+  {
+    left: 1%;
+    z-index: 1;
+
+      &:before
+        {
+          content: '<';
+          font-size: 25px;
+          font-weight: 700;
+          background-color: $first-page-color;
+          border-radius: 50%;
+          padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+          opacity: 1;
+        }
+
+  }
+
+.slick-next
+  {
+    right: 6%;
+    z-index: 1;
+
+    &:before
+      {
+        content: '>';
+        font-size: 25px;
+        font-weight: 700;
+        background-color: $first-page-color;
+        border-radius: 50%;
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+        opacity: 1;
+      }
+
+  }
+
+
+.slick-center
+  {
+    opacity: 1 !important;
+  }
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+  {
+    opacity: 1;
+  }
+
+.first-main-image
+  {
+    @extend %main-images;
+    background-image: url("../images/index/main-image.jpg");
+  }
+
+.second-main-image
+  {
+    @extend %main-images;
+    background-image: url("../images/about/main-image2.jpg");
+  }
+
+.third-main-image
+  {
+    @extend %main-images;
+    background-image: url("../images/portfolio/main-image3.jpg");
+  }
+
+.fourth-main-image
+  {
+    @extend %main-images;
+    background-image: url("../images/blog/main-image4.jpg");
+  }
+
+.fifth-main-image
+  {
+    @extend %main-images;
+    background-image: url("../images/contact/main-image5.jpg");
+  }
+
+.navbar
+  {
+    padding: 0 !important;
+  }
+
+.navbar .navbar-toggler
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: $first-page-color;
+  }
+
+.navbar .navbar-collapse
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: $first-page-color;
+  }
+
+.navbar .navbar-nav .nav-link
+  {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
+
+.navbar .navbar-nav .nav-item
+  {
+    font-size: 1.1rem;
+  }
+
+.header-text
+  {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.header-paragraph
+  {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+    width: 80%;
+    margin: 1rem 0 0 0;
+  }
+
+.header-main-text
+  {
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 90%;
+  }
+
+.header-button
+  {
+    font-size: 1rem;
+    border: 0.125rem solid #fff;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    height: 3rem;
+
+    &:hover
+      {
+        background-color: $first-page-color-rgba;
+      }
+
+  }
+
+.newest-container
+  {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+.newest-info
+  {
+    font-size: 1.3rem;
+    color: $first-page-color;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+  }
+
+.album-table
+  {
+    float: left;
+    width: 100%;
+    height: 35%;
+    position: relative;
+  }
+
+.first-album-image
+  {
+    background-image: url("../images/portfolio/first-album.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 15rem;
+
+      &:hover
+        {
+          background-image: url("../images/portfolio/first-album2.jpg");
+        }
+
+  }
+
+.second-album-image
+  {
+    background-image: url("../images/portfolio/second-album.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 15rem;
+
+      &:hover
+        {
+          background-image: url("../images/portfolio/second-album2.jpg");
+        }
+
+  }
+
+.third-album-image
+  {
+    background-image: url("../images/portfolio/third-album.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 15rem;
+
+      &:hover
+        {
+          background-image: url("../images/portfolio/third-album2.jpg");
+        }
+
+  }
+
+.albums-text
+  {
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+.album-bottom-text
+  {
+    width: 100%;
+    color: $first-page-color;
+    font-size: 1.1rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+  }
+
+.album-bottom-date
+  {
+    width: 100%;
+    color: $first-page-color;
+    font-size: 0.8rem;
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+  }
+
+.album-margin-bottom
+  {
+    margin: 0 0 10rem 0;
+  }
+
+.albums-horizontal-line
+  {
+    background-color: $first-page-color;
+    width: 30%;
+    margin: 0 auto;
+  }
+
+.first-section-welcome
+  {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -8%;
+    left: 5%;
+  }
+
+.first-section-header3
+  {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.5rem 0 0 0.5rem;
+  }
+
+.first-section-welcome-text
+  {
+    font-size: 0.7rem;
+    color: #fff;
+    padding: 0 0.5rem 1rem 0.5rem;
+    text-align: justify;
+  }
+
+.first-section-welcome
+  {
+    background-color: $first-page-color;
+    width: 90%;
+    transition: 0.5s ease-in-out;
+  }
+
+.first-section-welcome:hover
+  {
+    background-color: $gray-color;
+  }
+
+.welcome-main-image
+  {
+    background-image: url("../images/index/welcome-image.jpeg");
+    background-attachment: fixed;
+    @extend %main-images;
+  }
+
+section
+  {
+    position: relative;
+  }
+
+.second-section-header
+  {
+    font-size: 1.7rem;
+    color: $first-page-color;
+    text-align: center;
+    margin: 2.5rem 0 0 0;
+  }
+
+.second-section
+  {
+    width: 100%;
+    overflow: hidden;
+  }
+
+.second-section-frames
+  {
+    text-align: center;
+    margin: 3rem 0 0 0;
+  }
+
+.first-frame-image
+  {
+    @extend %frame-images;
+    background-image: url("../images/index/nature-frame.jpg");
+  }
+
+.first-frame-text
+  {
+
+    @extend %frame-texts;
+    background-color: #399c3a;
+
+      &:hover
+        {
+          background-color: $first-page-color;
+          color: #399c3a;
+        }
+
+  }
+
+.second-frame-image
+  {
+    @extend %frame-images;
+    margin: 8% 0 0 1%;
+    background-position: 60%;
+    background-image: url("../images/index/landscape-frame.jpg");
+  }
+
+.second-frame-text
+  {
+
+    @extend %frame-texts;
+    background-color: #239c95;
+
+    &:hover
+      {
+        background-color: $first-page-color;
+        color: #239c95
+      }
+
+  }
+
+.third-frame-image
+  {
+    @extend %frame-images;
+    margin: 1rem 0 0 1%;
+    background-image: url("../images/index/people-frame.jpg");
+  }
+
+.third-frame-text
+  {
+
+    @extend %frame-texts;
+    background-color: #92799c;
+
+    &:hover
+      {
+        background-color: $first-page-color;
+        color: #92799c;
+      }
+
+  }
+
+.fourth-frame-image
+  {
+    @extend %frame-images;
+    margin: 8% 0 0 1%;
+    background-position: 70%;
+    background-image: url("../images/index/things-frame.jpg");
+  }
+
+.fourth-frame-text
+  {
+
+    @extend %frame-texts;
+    background-color: #879c95;
+
+    &:hover
+      {
+        background-color: $first-page-color;
+        color: #879c95;
+      }
+
+  }
+
+.photography-studio-view-hr
+  {
+    border-top: 3px solid $first-page-color;
+    border-bottom: 3px solid $first-page-color;
+    width: 100%;
+    margin: 0;
+    clear: both;
+  }
+
+.footer-container
+  {
+
+    width: 100%;
+    height: 6rem;
+    background-color: $first-page-color;
+    overflow: hidden;
+    margin: 3rem 0 0 0;
+    transition: 0.5s ease-in-out;
+
+      &:hover
+        {
+          background-color: $gray-color;
+        }
+
+  }
+
+.footer-meet-us
+  {
+    font-size: 1.9rem;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 0 0;
+  }
+
+.footer-social
+  {
+    width: 100%;
+    height: 15rem;
+  }
+
+.main-social-icons
+  {
+    font-size: 7.5rem !important;
+    color:#fff;
+    padding: 4rem 0 0 35%;
+  }
+
+.social-facebook
+  {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(59, 89, 152);
+    float: left;
+    opacity: 0.8;
+
+      &:hover
+        {
+          opacity: 1;
+        }
+
+  }
+
+.social-pinterest
+  {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(203, 32, 39);
+    float: left;
+    opacity: 0.8;
+
+      &:hover
+        {
+          opacity: 1;
+        }
+
+  }
+
+.social-twitter
+  {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 172, 237);
+    float: left;
+    opacity: 0.8;
+
+      &:hover
+        {
+          opacity: 1;
+        }
+
+  }
+
+.social-youtube
+  {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(187, 0, 0);
+    float: left;
+    opacity: 0.8;
+
+      &:hover
+        {
+          opacity: 1;
+        }
+
+  }
+
+.footer-copyright
+  {
+    width: 100%;
+    height: 6.75rem;
+    clear: both;
+  }
+
+.paragraph-copyright
+  {
+    font-size: 1.1rem;
+    text-align: center;
+    color: $first-page-color;
+    padding: 2rem 0 0 0;
+  }
+
+/* ---------- about.html styles ---------- */
+
+.about .navbar .navbar-toggler
+  {
+    background-color: $second-page-color;
+  }
+
+.about .navbar .navbar-collapse
+  {
+    background-color: $second-page-color;
+  }
+
+.about .slick-prev:before
+  {
+    background-color: $second-page-color;
+  }
+
+.about .slick-next:before
+  {
+    background-color: $second-page-color;
+  }
+
+.about .header-button:hover
+  {
+    background-color: $second-page-color-rgba;
+  }
+
+.projects-count-container
+  {
+    width: 100%;
+  }
+
+.projects-count-block
+  {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+  }
+
+.projects-count-block  p:first-child
+  {
+    font-size: 3.1rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    font-weight: 700;
+    color: $second-page-color;
+    transition: ease-in-out;
+
+      &:hover
+        {
+          -webkit-transform: scale(1.4);
+          -ms-transform: scale(1.4);
+          transform: scale(1.4);
+        }
+  }
+
+.projects-count-block p:last-child
+  {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    color: $second-page-color;
+    font-weight: 700;
+  }
+
+.our-features
+  {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $second-page-color;
+  }
+
+.our-features-header
+  {
+    font-size: 1.3rem;
+    color: #fff;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    padding: 2rem 0 0 0;
+    text-transform: uppercase;
+  }
+
+.features-horizontal-line
+  {
+    width: 20%;
+    margin: 1.5rem auto 3rem auto;
+    border: 0.125rem solid #fff;
+  }
+
+.features-section-container
+  {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+.our-features-blocks
+  {
+    width: 100%;
+    padding: 1.5%;
+    margin: 0 0 1rem 0;
+    transition: 1s;
+  }
+
+.our-features-blocks:hover
+  {
+    background-color: $gray-color;
+  }
+
+.our-features-blocks p:nth-child(2)
+  {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 4% 0 0 0;
+  }
+
+.our-features-blocks p:nth-child(3)
+  {
+    color: #fff;
+    padding: 8% 0 0 0;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+.photography-studio-view
+  {
+    @extend %main-images;
+    background-image: url("../images/about/photography-studio.jpg");
+    background-attachment: fixed;
+  }
+
+.about .photography-studio-view-hr
+  {
+    border-top: 3px solid $second-page-color;
+    border-bottom: 3px solid $second-page-color;
+  }
+
+
+.meet-us-section
+  {
+    width: 100%;
+  }
+
+.meet-our-crew-container
+  {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+.meet-our-crew-header
+  {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 2rem 0 0 0;
+    color: $second-page-color;
+  }
+
+.meet-our-crew-horizontal-line
+  {
+    width: 20%;
+    color: $second-page-color;
+    margin: 1rem auto 2rem auto;
+    border: 0.125rem solid $second-page-color;
+  }
+
+.meet-our-crew-paragraph
+  {
+    color: $second-page-color;
+    text-align: center;
+    font-weight: 700;
+  }
+
+.meet-our-crew-portraits-top
+  {
+    width: 100%;
+    height: 28rem;
+    margin: 0 auto;
+  }
+
+.meet-our-crew-portraits
+  {
+    width: 100%;
+    height: 28rem;
+    float: left;
+  }
+
+.first-portrait-frame
+  {
+    background-image: url("../images/about/first-portrait.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55%;
+    width: 100%;
+    border: 0.3rem solid $second-page-color;
+    border-radius: 50%;
+    margin: 2rem auto 1rem auto;
+    transition: 0.5s ease-in-out;
+
+      &:hover
+        {
+          border: 0.3rem solid $gray-color;
+        }
+  }
+
+.first-portrait-specialization
+  {
+    color: $gray-color;
+    font-weight: 700;
+    text-align: center;
+  }
+
+.first-portrait-more-info
+  {
+    color: $second-page-color;
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+
+.second-portrait-frame
+  {
+    background-image: url("../images/about/second-portrait.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55%;
+    width: 100%;
+    border: 0.3rem solid $second-page-color;
+    border-radius: 50%;
+    margin: 0 0 1rem 0;
+    transition: 0.5s ease-in-out;
+
+    &:hover
+      {
+        border: 0.3rem solid $gray-color;
+      }
+  }
+
+
+.second-portrait-specialization
+  {
+    color: $gray-color;
+    text-align: center;
+    font-weight: 700;
+  }
+
+.second-portrait-more-info
+  {
+    color: $second-page-color;
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+
+.third-portrait-frame
+  {
+    background-image: url("../images/about/third-portrait.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55%;
+    width: 100%;
+    border: 0.3rem solid $second-page-color;
+    border-radius: 50%;
+    margin: 0 0 1rem 0;
+    transition: 0.5s ease-in-out;
+
+      &:hover
+        {
+          border: 0.3rem solid $gray-color;
+        }
+  }
+
+.third-portrait-specialization
+  {
+    color: $gray-color;
+    text-align: center;
+    font-weight: 700;
+  }
+
+.third-portrait-more-info
+  {
+    color: $second-page-color;
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+
+.fourth-portrait-frame
+  {
+    background-image: url("../images/about/fourth-portrait.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55%;
+    width: 100%;
+    border: 0.3rem solid $second-page-color;
+    border-radius: 50%;
+    margin: 0 0 5% 0;
+    transition: 0.5s ease-in-out;
+
+      &:hover
+        {
+          border: 0.3rem solid $gray-color;
+        }
+  }
+
+.fourth-portrait-specialization
+  {
+    color: $gray-color;
+    text-align: center;
+    font-weight: 700;
+  }
+
+.fourth-portrait-more-info
+  {
+    color: $second-page-color;
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+
+.photography-studio-camera
+  {
+    @extend %main-images;
+    clear: both;
+    background-image: url("../images/about/photography-studio-camera.jpg");
+    background-attachment: fixed;
+  }
+
+.our-experience-container
+  {
+    width: 100%;
+    background-color: $second-page-color;
+  }
+
+.our-experience-header
+  {
+    font-size: 1.3rem;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 0 0;
+    text-transform: uppercase;
+  }
+
+.our-experience-blocks
+  {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+.our-experience-image-first
+  {
+    background-image: url("../images/about/modelling-experience.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 17rem;
+    transition: .2s ease-in-out;
+
+      &:hover
+        {
+          -webkit-transform: scale(0.9) rotate(-5deg);
+          -ms-transform: scale(0.9) rotate(-5deg);
+          transform: scale(0.9) rotate(-5deg);
+        }
+  }
+
+.our-experience-image-second
+  {
+    background-image: url("../images/about/family-experience.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 17rem;
+    transition: 0.2s ease-in-out;
+
+      &:hover
+        {
+          -webkit-transform: scale(0.9) rotate(5deg);
+          -ms-transform: scale(0.9) rotate(5deg);
+          transform: scale(0.9) rotate(5deg);
+        }
+  }
+
+.our-experience-image-third
+  {
+    background-image: url("../images/about/wedding-experience.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 17rem;
+    transition: .2s ease-in-out;
+
+      &:hover
+        {
+          -webkit-transform: scale(0.9) rotate(5deg);
+          -ms-transform: scale(0.9) rotate(5deg);
+          transform: scale(0.9) rotate(5deg);
+        }
+  }
+
+.our-experience-image-fourth
+  {
+    background-image: url("../images/about/portraits-experience.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 17rem;
+    transition: .2s ease-in-out;
+
+      &:hover
+        {
+          -webkit-transform: scale(0.9) rotate(-5deg);
+          -ms-transform: scale(0.9) rotate(-5deg);
+          transform: scale(0.9) rotate(-5deg);
+        }
+  }
+
+.our-experience-main-text
+  {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    padding: 1rem 0 0 0;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+  }
+
+.our-experience-bottom-text
+  {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0 0 0;
+    font-size: 1.1rem;
+  }
+
+.about .paragraph-copyright
+  {
+    color: $second-page-color;
+  }
+
+/* ---------- portfolio.html styles ---------- */
+
+.portfolio .navbar .navbar-toggler
+  {
+    background-color: $third-page-color;
+  }
+
+.portfolio .navbar .navbar-collapse
+  {
+    background-color: $third-page-color;
+  }
+
+.portfolio .slick-prev:before
+  {
+    background-color: $third-page-color;
+  }
+
+.portfolio .slick-next:before
+  {
+    background-color: $third-page-color;
+  }
+
+.portfolio .header-button:hover
+  {
+    background-color: $third-page-color-rgba;
+  }
+
+.portfolio .header-button:hover
+  {
+    background-color: $third-page-color-rgba;
+  }
+
+.portfolio-first-header
+  {
+    font-size: 1.3rem;
+    color: $third-page-color;
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    text-transform: uppercase;
+  }
+
+.portfolio-grid-padding-regular
+  {
+    padding: 0 7.5px 0 7.5px !important;
+  }
+
+.overlay-images
+  {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $third-page-color-rgba;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+.portfolio-photo1
+  {
+    height: 25rem;
+    background-image: url("../images/portfolio/portfolio-photo1.jpg");
+    background-position: 30%;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo2
+  {
+    height: 18.75rem;
+    background-image: url("../images/portfolio/portfolio-photo2.jpg");
+    background-position: 60%;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo3
+  {
+    height: 13.75rem;
+    background-image: url("../images/portfolio/portfolio-photo3.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo4
+  {
+    height: 15rem;
+    background-image: url("../images/portfolio/portfolio-photo4.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo5
+  {
+    height: 18.75rem;
+    background-image: url("../images/portfolio/portfolio-photo5.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo6
+  {
+    height: 12.5rem;
+    background-image: url("../images/portfolio/portfolio-photo6.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo7
+  {
+    height: 15.625rem;
+    background-image: url("../images/portfolio/portfolio-photo7.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo8
+  {
+    height: 11.25rem;
+    background-image: url("../images/portfolio/portfolio-photo8.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo9
+  {
+    height: 13.75rem;
+    background-image: url("../images/portfolio/portfolio-photo9.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo10
+  {
+    height: 13.75rem;
+    background-image: url("../images/portfolio/portfolio-photo10.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo11
+  {
+    height: 17.5rem;
+    background-image: url("../images/portfolio/portfolio-photo11.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo12
+  {
+    height: 23.125rem;
+    background-image: url("../images/portfolio/portfolio-photo12.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo13
+  {
+    height: 18.125rem;
+    background-image: url("../images/portfolio/portfolio-photo13.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo14
+  {
+    height: 15.625rem;
+    background-image: url("../images/portfolio/portfolio-photo14.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo15
+  {
+    height: 18.75rem;
+    background-image: url("../images/portfolio/portfolio-photo15.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo16
+  {
+    height: 18.75rem;
+    background-image: url("../images/portfolio/portfolio-photo16.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-photo17
+  {
+    height: 19.375rem;
+    background-image: url("../images/portfolio/portfolio-photo17.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0.625rem 0 0 0;
+    position: relative;
+  }
+
+.portfolio-second-container
+  {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $third-page-color;
+  }
+
+.portfolio-second-header
+  {
+    font-size: 1.3rem;
+    color: #fff;
+    text-align: center;
+    margin: 3rem 0 3rem 0;
+    padding: 2rem 0 0 0;
+    text-transform: uppercase;
+  }
+
+.portfolio-first-album-image
+  {
+    @extend %portfolio-images;
+    background-image: url("../images/portfolio/first-album.jpg");
+  }
+
+.portfolio-second-album-image
+  {
+    @extend %portfolio-images;
+    background-image: url("../images/portfolio/second-album.jpg");
+  }
+
+.portfolio-third-album-image
+  {
+    @extend %portfolio-images;
+    background-image: url("../images/portfolio/third-album.jpg");
+  }
+
+.portfolio-fourth-album-image
+  {
+    @extend %portfolio-images;
+    background-image: url("../images/portfolio/fourth-album.jpg");
+  }
+
+.portfolio-fifth-album-image
+  {
+    @extend %portfolio-images;
+    background-image: url("../images/portfolio/fifth-album.jpg");
+  }
+
+.portfolio-sixth-album-image
+  {
+    @extend %portfolio-images;
+    background-image: url("../images/portfolio/sixth-album.jpg");
+  }
+
+.portfolio-first-album-image:hover .portfolio-albums-text, .portfolio-second-album-image:hover .portfolio-albums-text, .portfolio-third-album-image:hover .portfolio-albums-text,
+.portfolio-fourth-album-image:hover .portfolio-albums-text, .portfolio-fifth-album-image:hover .portfolio-albums-text, .portfolio-sixth-album-image:hover .portfolio-albums-text
+  {
+    display: block;
+  }
+
+.portfolio-albums-text
+  {
+    display: none;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 2.8rem;
+  }
+
+.portfolio-album-bottom-text
+  {
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+  }
+
+.portfolio-album-bottom-date
+  {
+    width: 100%;
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 1rem 0 3rem 0;
+    text-align: center;
+  }
+
+.portfolio-albums-horizontal-line
+  {
+    width: 20%;
+    border: 1px solid #fff;
+    margin: 0 auto;
+  }
+
+.portfolio .paragraph-copyright
+  {
+    color: $third-page-color;
+  }
+
+/* ---------- blog.html styles ---------- */
+
+.blog .navbar .navbar-toggler
+  {
+    background-color: $fourth-page-color;
+  }
+
+.blog .navbar .navbar-collapse
+  {
+    background-color: $fourth-page-color;
+  }
+
+.blog .slick-prev:before
+  {
+    background-color: $fourth-page-color;
+  }
+
+.blog .slick-next:before
+  {
+    background-color: $fourth-page-color;
+  }
+
+.blog .header-button:hover
+  {
+    background-color: $fourth-page-color-rgba;
+  }
+
+.blog .header-button:hover
+  {
+    background-color: $fourth-page-color-rgba;
+  }
+
+.blog-header-text
+  {
+    font-size: 1.7rem;
+    color: $fourth-page-color;
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+.no-padding
+  {
+    padding: 0;
+  }
+
+.blog-paragraph-text
+  {
+    color: $fourth-page-color;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+    font-size: 1.3rem;
+  }
+
+.blog .paragraph-copyright
+  {
+    color: $fourth-page-color;
+  }
+
+.blog-first-image
+  {
+    @extend %main-images;
+    background-image: url("../images/blog/blog-first-image.jpg");
+    position: relative;
+    background-attachment: fixed;
+  }
+
+.blog-first-image-text-container
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+.blog-image-first-text
+  {
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0 0 0 1rem;
+  }
+
+.blog-image-second-text
+  {
+    color: #fff;
+    font-size: 1.9rem;
+    width: 100%;
+    margin: 0 0 0 2rem;
+    font-weight: 700;
+  }
+
+.blog-image-third-text
+  {
+    display: inline;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: $fourth-page-color;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 1rem 0 0 3rem;
+    cursor: pointer;
+  }
+
+.blog-image-third-text:hover
+  {
+    background-color: $gray-color;
+  }
+
+article
+  {
+    margin: 3rem 0 0 0;
+    background-color: #fff;
+
+    -webkit-box-shadow: 19px 19px 12px -10px rgba(0,0,0,0.61);
+    -moz-box-shadow: 19px 19px 12px -10px rgba(0,0,0,0.61);
+    box-shadow: 19px 19px 12px -10px rgba(0,0,0,0.61);
+  }
+
+.blog-article-title
+  {
+    text-align: center;
+    text-transform: uppercase;
+    color: $fourth-page-color;
+    padding: 1rem 0 0 0;
+  }
+
+.blog-article-title-desc
+  {
+    text-align: center;
+    color: $gray-color;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+.blog-fifth-article-image
+  {
+    @extend %blog-article-images;
+    background-image: url("../images/blog/blog-fifth-article-image.jpg");
+  }
+
+.blog-fourth-article-image
+  {
+    @extend %blog-article-images;
+    background-image: url("../images/blog/blog-fourth-article-image.jpg");
+  }
+
+.blog-third-article-image
+  {
+    @extend %blog-article-images;
+    background-image: url("../images/blog/blog-third-article-image.jpg");
+  }
+
+.blog-second-article-image
+  {
+    @extend %blog-article-images;
+    background-image: url("../images/blog/blog-second-article-image.jpg");
+  }
+
+.blog-first-article-image
+  {
+    @extend %blog-article-images;
+    background-image: url("../images/blog/blog-first-article-image.jpg");
+  }
+
+.blog-article-info
+  {
+    color: $fourth-page-color;
+    margin: 2rem;
+    text-align: justify;
+  }
+
+.blog-article-comments
+  {
+    color: $gray-color;
+    margin: 1rem auto 1rem auto;
+    padding: 0 1rem 1rem 0;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: right;
+  }
+
+.blog-aside-about-me-container
+  {
+    overflow: hidden;
+    background-color: #fff;
+    margin: 3rem 0 0 0;
+    -webkit-box-shadow: 19px 19px 12px -10px rgba(0,0,0,0.61);
+    -moz-box-shadow: 19px 19px 12px -10px rgba(0,0,0,0.61);
+    box-shadow: 19px 19px 12px -10px rgba(0,0,0,0.61);
+
+  .blog-aside-about-me-head
+      {
+        color: #fff;
+        margin: 0;
+        padding: 1rem 0 1rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        background-color: $gray-color;
+        border: 3px solid transparent;
+      }
+
+  .blog-aside-about-me-head:hover
+    {
+      background-color: $fourth-page-color;
+      border-top: 3px solid $gray-color;
+      border-left: 3px solid $gray-color;
+      border-right: 3px solid $gray-color;
+    }
+
+  .blog-aside-about-me-info
+    {
+      color: $fourth-page-color;
+      padding: 1rem 2rem 2rem 2rem;
+      text-align: justify;
+    }
+  }
+
+.blog-aside-about-me-popular
+  {
+      color: $fourth-page-color;
+      text-align: justify;
+      margin: 0;
+  }
+
+.blog-popular-photo1
+  {
+    @extend %blog-popular-photos;
+    background-image: url("../images/portfolio/portfolio-photo1.jpg");
+
+    &:hover
+      {
+        opacity: 0.8;
+      }
+  }
+
+.blog-popular-photo2
+  {
+    @extend %blog-popular-photos;
+    background-image: url("../images/portfolio/portfolio-photo9.jpg");
+
+    &:hover
+      {
+        opacity: 0.8;
+      }
+  }
+
+.blog-popular-photo3
+  {
+    @extend %blog-popular-photos;
+    background-image: url("../images/portfolio/portfolio-photo11.jpg");
+
+    &:hover
+      {
+        opacity: 0.8;
+      }
+  }
+
+.blog-popular-photo4
+  {
+    @extend %blog-popular-photos;
+    background-image: url("../images/portfolio/portfolio-photo16.jpg");
+
+    &:hover
+      {
+        opacity: 0.8;
+      }
+  }
+
+.blog-third-article-image-min
+  {
+    @extend %blog-article-images-min;
+    background-image: url("../images/blog/blog-third-article-image.jpg");
+  }
+
+.blog-fifth-article-image-min
+  {
+    @extend %blog-article-images-min;
+    background-image: url("../images/blog/blog-fifth-article-image.jpg");
+  }
+
+.blog-second-article-image-min
+  {
+    @extend %blog-article-images-min;
+    background-image: url("../images/blog/blog-second-article-image.jpg");
+  }
+
+.blog-first-article-image-min
+  {
+    @extend %blog-article-images-min;
+    background-image: url("../images/blog/blog-first-article-image.jpg");
+  }
+
+.blog-aside-horizontal-line
+  {
+    margin: 0;
+    border: 1px solid $gray-color;
+  }
+
+.blog-aside-popular-rows
+  {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+
+.blog-aside-popular-rows:hover
+  {
+    background-color: $fourth-page-color;
+
+    .blog-aside-about-me-popular
+      {
+        color: #fff !important;
+      }
+  }
+
+.blog-aside-about-me-tags
+  {
+    color: $fourth-page-color;
+    padding: 1rem 2rem 2rem 2rem;
+    text-align: justify;
+  }
+
+.blog-aside-tag-active
+  {
+    background-color: $gray-color;
+    text-align: left;
+    color: #fff;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+  }
+
+.blog-aside-tag-disabled
+  {
+    text-align: left;
+    padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+  }
+
+.blog-aside-tag-disabled:hover
+  {
+    background-color: $gray-color;
+    color: #fff;
+  }
+
+iframe
+  {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+.blog-socials
+  {
+    font-size: 2rem;
+    color: $fourth-page-color;
+    margin: 0 0 0 1rem;
+
+    &:hover
+      {
+        color: $gray-color;
+      }
+  }
+
+/* ---------- contact.html styles ---------- */
+
+.contact .navbar .navbar-toggler
+  {
+    background-color: $fifth-page-color;
+  }
+
+.contact .navbar .navbar-collapse
+  {
+    background-color: $fifth-page-color;
+  }
+
+.contact .slick-prev:before
+  {
+    background-color: $fifth-page-color;
+  }
+
+.contact .slick-next:before
+  {
+    background-color: $fifth-page-color;
+  }
+
+.contact .header-button:hover
+  {
+    background-color: $fifth-page-color-rgba;
+  }
+
+.contact .header-button:hover
+  {
+    background-color: $fifth-page-color-rgba;
+  }
+
+.contact-header, .contact-visit-us
+  {
+    font-size: 2.3rem;
+    color: $fifth-page-color;
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+  }
+
+.contact-header-paragraph
+  {
+    font-size: 1.1rem;
+    color: $fifth-page-color;
+    width: 100%;
+  }
+
+.contact .photography-studio-view-hr
+  {
+    border-top: 3px solid $fifth-page-color;
+    border-bottom: 3px solid $fifth-page-color;
+  }
+
+input[type=text], select, textarea
+  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $fifth-page-color;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+input[type=submit]
+  {
+    background-color: $fifth-page-color;
+    color: #fff;
+    padding: 0.5rem 1.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    border: 1px solid transparent;
+  }
+
+label
+  {
+    color: $fifth-page-color;
+  }
+
+input[type=submit]:hover
+  {
+    background-color: #fff;
+    border: 1px solid $fifth-page-color;
+    color: $fifth-page-color;
+  }
+
+.form-container
+  {
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+.contact-image
+  {
+      @extend %main-images;
+      background-attachment: fixed;
+      background-image: url("../images/contact/contact-image.jpg");
+  }
+
+.contact .paragraph-copyright
+  {
+    color: $fifth-page-color;
+  }
+
+#map
+  {
+    width: 100%;
+    height: 30rem;
+  }
+
+address h2
+  {
+    color: $fifth-page-color;
+    font-size: 1.6rem;
+    padding: 0 1rem 2rem 1rem;
+  }
+
+address p:nth-child(2), address p:nth-child(3), address p:nth-child(4), address p:nth-child(5)
+  {
+    color: $fifth-page-color;
+    font-size: 1.2rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+address p:nth-child(6)
+  {
+    color: $fifth-page-color;
+    font-size: 1.4rem;
+    padding: 2rem 1rem 0 1rem;
+  }
+
+.contact .footer-copyright
+  {
+    background-color: $fifth-page-color;
+    margin: 2rem 0 0 0;
+  }
+
+.contact .paragraph-copyright
+  {
+    color: #fff;
+  }
+
+/* ---------- media queries ---------- */
+
+@media (max-width: 768px)
+  {
+    .navbar .navbar-nav .nav-link
+      {
+        border: 1px solid #fff;
+      }
+  }
+
+@media (min-width: 576px)
+  {
+    .slick-next
+      {
+        right: 3%;
+      }
+
+    .header-paragraph
+      {
+        font-size: 1.2rem;
+      }
+
+    .header-main-text
+      {
+        font-size: 3rem;
+      }
+
+    .header-button
+      {
+        font-size: 1.1rem;
+      }
+
+    .newest-info, .blog-header-text
+      {
+        font-size: 1.8rem;
+      }
+
+    .album-table
+      {
+        width: 30%;
+        height: 35%;
+        margin: 5% 0 2% 3%;
+      }
+
+    .first-section-header3
+      {
+        font-size: 2.5rem;
+        padding: 1.5rem 0 0 1.5rem;
+      }
+
+    .first-section-welcome
+      {
+        width: 90%;
+        bottom: -18%;
+        left: 5%;
+      }
+
+    .first-section-welcome-text
+      {
+        font-size: 0.9rem;
+        padding: 0 1.5rem 1.5rem 0.5rem;
+        margin: 0.5rem 0.5rem 0.5rem 4rem;
+      }
+
+    .first-frame-image, .second-frame-image, .third-frame-image, .fourth-frame-image
+      {
+        width: 49%;
+      }
+
+    .social-facebook, .social-pinterest, .social-youtube, .social-twitter
+      {
+        width: 50%;
+      }
+
+    .projects-count-block
+      {
+        width: 50%;
+      }
+
+    .our-features-header
+      {
+        font-size: 1.7rem;
+      }
+
+    .our-features-blocks
+      {
+        width: 50%;
+      }
+
+    .meet-our-crew-header
+      {
+        font-size: 1.9rem;
+      }
+
+    .first-portrait-frame, .second-portrait-frame, .third-portrait-frame, .fourth-portrait-frame
+      {
+        width: 50%;
+      }
+
+    .second-portrait-frame, .third-portrait-frame, .fourth-portrait-frame
+      {
+        margin: 0 auto;
+      }
+
+    .our-experience-header
+      {
+        font-size: 1.7rem;
+      }
+
+    .our-experience-blocks
+      {
+        width: 48%;
+        margin: 0 0 0 0.4rem;
+      }
+
+    .portfolio-first-header
+      {
+        font-size: 1.8rem;
+      }
+
+    .portfolio-second-header
+      {
+        font-size: 1.6rem;
+      }
+
+    .paragraph-copyright
+      {
+        font-size: 1.35rem;
+      }
+  }
+
+@media (min-width: 768px)
+  {
+    .newest-container
+      {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+    .header-paragraph
+      {
+        font-size: 1.4rem;
+      }
+
+    .header-main-text
+      {
+        font-size: 3.5rem;
+      }
+
+    .navbar .navbar-collapse, .about .navbar .navbar-collapse, .portfolio .navbar .navbar-collapse, .blog .navbar .navbar-collapse, .contact .navbar .navbar-collapse
+      {
+        position: relative;
+      }
+
+    .header-main-text
+      {
+        font-size: 4rem;
+      }
+
+    .newest-info, .blog-header-text
+      {
+        font-size: 2.5rem;
+      }
+
+    .first-section-header3
+      {
+        font-size: 3rem;
+        padding: 1.5rem 0 0 2.5rem;
+      }
+
+    .first-section-welcome
+      {
+        bottom: -18%;
+      }
+
+    .first-section-welcome-text
+      {
+        margin: 0.5rem 0.5rem 0.5rem 7rem;
+      }
+
+    .navbar .navbar-collapse, .about .navbar .navbar-collapse, .portfolio .navbar .navbar-collapse, .blog .navbar .navbar-collapse, .contact .navbar .navbar-collapse
+      {
+        background-color: transparent;
+      }
+
+    .navbar .navbar-nav .nav-link
+      {
+        color: #fff;
+        margin: 0 0 0 2.5rem;
+      }
+
+    .navbar-header-border
+      {
+        border-left: 3px solid rgba(255,255,255, 0);
+        border-right: 3px solid rgba(255,255,255, 0);
+      }
+
+    .navbar-header-border:hover
+      {
+        border-left: 3px solid rgba(255,255,255, .5);
+        border-right: 3px solid rgba(255,255,255, .5);
+      }
+
+    .navbar-item-border
+      {
+        border-top: 3px solid rgba(255,255,255, 0);
+
+          &:hover
+            {
+              border-top: 3px solid rgba(255,255,255, .5);
+            }
+      }
+
+    .first-frame-image, .second-frame-image, .third-frame-image, .fourth-frame-image
+      {
+        width: 20%;
+        margin-left: 2rem;
+      }
+
+    .social-facebook, .social-pinterest, .social-youtube, .social-twitter
+      {
+        width: 25%;
+      }
+
+    .projects-count-block
+      {
+        width: 25%;
+      }
+
+    .our-features-header
+      {
+        font-size: 1.9rem;
+      }
+
+    .features-horizontal-line
+      {
+        width: 10%;
+      }
+
+    .meet-our-crew-horizontal-line
+      {
+        width: 10%;
+      }
+
+    .first-portrait-more-info, .second-portrait-more-info, .third-portrait-more-info, .fourth-portrait-more-info
+      {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+    .our-experience-header
+      {
+        font-size: 2.2rem;
+      }
+
+    .our-experience-blocks
+      {
+        margin: 0 0 0 0.7rem;
+      }
+
+    .portfolio-first-header
+      {
+        font-size: 2.1rem;
+      }
+
+    .portfolio-second-header
+      {
+        font-size: 2rem;
+      }
+
+    .form-container
+      {
+        width: 50%;
+      }
+
+    .overlay-icon
+      {
+        color: #fff;
+        font-size: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+    .overlay-icon:hover
+      {
+        color: #fff;
+      }
+
+    .portfolio-photo1:hover .overlay-images, .portfolio-photo2:hover .overlay-images, .portfolio-photo3:hover .overlay-images, .portfolio-photo4:hover .overlay-images, .portfolio-photo5:hover .overlay-images, .portfolio-photo6:hover .overlay-images, .portfolio-photo7:hover .overlay-images, .portfolio-photo8:hover .overlay-images, .portfolio-photo9:hover .overlay-images, .portfolio-photo10:hover .overlay-images, .portfolio-photo11:hover .overlay-images, .portfolio-photo12:hover .overlay-images, .portfolio-photo13:hover .overlay-images, .portfolio-photo14:hover .overlay-images, .portfolio-photo15:hover .overlay-images, .portfolio-photo16:hover .overlay-images, .portfolio-photo17:hover .overlay-images
+      {
+        display: block;
+      }
+
+    #map
+      {
+        width: 50%;
+      }
+
+    .display-flex
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .contact-header-paragraph
+      {
+        width: 60%;
+        margin: 2rem auto 1rem auto;
+      }
+  }
+
+@media (min-width: 992px)
+  {
+    .slick-next
+      {
+        right: 2%;
+      }
+
+    .header-paragraph
+      {
+        font-size: 1.6rem;
+      }
+
+    .first-section-welcome-text
+      {
+        margin: 0.5rem 0.5rem 0.5rem 7rem;
+        font-size: 1.2rem;
+      }
+
+    .second-section-header
+      {
+        font-size: 3rem;
+      }
+
+    .our-features-header
+      {
+        font-size: 2.25rem;
+      }
+
+    .our-features-blocks
+      {
+        width: 33%;
+      }
+
+    .our-features-blocks p:nth-child(2)
+      {
+        font-size: 1.1rem;
+      }
+
+    .portfolio-first-header
+      {
+        font-size: 2.3rem;
+      }
+
+    .portfolio-second-header
+      {
+        font-size: 2.3rem;
+      }
+
+    #map
+      {
+        width: 30%;
+      }
+  }
+
+@media (min-width: 1200px)
+  {
+    .header-paragraph
+      {
+        font-size: 1.5rem;
+      }
+
+    .header-main-text
+      {
+        font-size: 5rem;
+      }
+
+    .first-section-welcome
+      {
+        bottom: -18%;
+      }
+
+    .first-section-welcome-text
+      {
+        margin: 0.5rem 0.5rem 0.5rem 18rem;
+        font-size: 1.2rem;
+      }
+
+    .first-frame-image
+      {
+        margin: 0 0 0 8%;
+        background-image: url("../images/index/nature-frame.jpg");
+        height: 28rem;
+        width: 20%;
+      }
+
+    .second-frame-image
+      {
+        margin: 8% 0 0 1%;
+        background-image: url("../images/index/landscape-frame.jpg");
+        height: 28rem;
+        width: 20%;
+      }
+    .third-frame-image
+      {
+        margin: 0 0 0 1%;
+        background-image: url("../images/index/people-frame.jpg");
+        height: 28rem;
+        width: 20%;
+      }
+
+    .fourth-frame-image
+      {
+        margin: 8% 0 0 1%;
+        background-image: url("../images/index/things-frame.jpg");
+        height: 28rem;
+        width: 20%;
+      }
+
+    .first-frame-text
+      {
+        width: 100%;
+        line-height: 300%;
+        left: 70%;
+      }
+
+    .second-frame-text
+      {
+        width: 100%;
+        line-height: 300%;
+        left: -70%;
+        top: 80%;
+      }
+
+    .third-frame-text
+      {
+        width: 100%;
+        line-height: 300%;
+        left: 70%;
+      }
+
+    .fourth-frame-text
+      {
+        width: 100%;
+        line-height: 300%;
+        left: -70%;
+        top: 80%;
+      }
+
+    .footer-meet-us
+      {
+        font-size: 2.3rem;
+        padding: 2% 0 0 0;
+      }
+
+    .social-facebook, .social-pinterest, .social-twitter, .social-youtube
+      {
+        width: 25%;
+        height: 100%;
+      }
+
+    .our-features-blocks p:nth-child(2)
+      {
+        font-size: 1.3rem;
+      }
+
+    .meet-our-crew-header
+      {
+        font-size: 2.25rem;
+      }
+
+    .meet-our-crew-portraits-top
+      {
+        width: 25%;
+      }
+
+    .meet-our-crew-portraits
+      {
+        width: 25%;
+        margin: 0 0 0 6%;
+      }
+
+    .first-portrait-frame, .second-portrait-frame, .third-portrait-frame, .fourth-portrait-frame
+      {
+        width: 100%;
+      }
+
+    .first-portrait-more-info, .second-portrait-more-info, .third-portrait-more-info, .fourth-portrait-more-info
+      {
+        width: 100%;
+      }
+
+    .our-experience-blocks
+      {
+        width: 35%;
+        margin: 0 0 0 10%;
+      }
+
+    .portfolio-album-table
+      {
+        width: 30%;
+        margin: 5% 0 2% 3%;
+      }
+}
